@@ -1,0 +1,390 @@
+@import "../../Assets/Fonts/fonts.scss";
+@import "../../Assets/Colors/colors.scss";
+
+.hero {
+  width: 100%;
+  font-family: $font-roboto;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    &__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 24rem;
+      width: 49rem;
+
+      &:hover {
+        img {
+          filter: grayscale(10);
+        }
+      }
+      &__img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+      }
+
+      &__description {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 30rem;
+
+        h2 {
+          font-size: 0.8rem;
+          font-weight: 100;
+          letter-spacing: 0.5rem;
+          margin-bottom: 0;
+        }
+        h3 {
+          font-size: 1.9rem;
+          margin-top: 0.3125rem;
+          letter-spacing: 0.625rem;
+        }
+        button {
+          color: white;
+          font-size: 0.9rem;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid rgb(230, 230, 230);
+          transition: 0.5s ease-in-out;
+          height: 3.125rem;
+          width: 9.375rem;
+
+          &:hover {
+            background-color: $pink;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__row2 {
+    margin-top: 2rem;
+    height: 16rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__cardHero {
+      width: 28rem;
+      height: 17rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 28rem;
+        height: 17rem;
+        position: absolute;
+        transition: 0.5s ease-in-out;
+        &:hover {
+          filter: grayscale(10);
+        }
+      }
+
+      &__description {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+          font-size: 0.6rem;
+          font-weight: 100;
+          letter-spacing: 0.5rem;
+        }
+        h3 {
+          font-size: 1rem;
+          margin-top: 0.3rem;
+          letter-spacing: 0.6rem;
+        }
+
+        button {
+          color: white;
+          font-size: 0.9rem;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          transition: 0.5s ease-in-out;
+          height: 3.1rem;
+
+          &:hover {
+            background-color: transparent;
+            color: $pink;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .text1 {
+    padding-left: 13.75rem;
+  }
+
+  .text2 {
+    padding-right: 14.625rem;
+
+    h2 {
+      letter-spacing: 0.3rem;
+    }
+    h3 {
+      letter-spacing: 0.3rem;
+    }
+    button {
+      color: black;
+    }
+  }
+
+  .text3 {
+    padding-left: 13.5rem;
+  }
+
+  &__row3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__icon {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+  .hero {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__row {
+    flex-direction: column;
+
+    &__card {
+      width: 28rem;
+      height: 17rem;
+      &__img {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  .hero__row2 {
+    flex-direction: column;
+    align-items: center;
+    height: 54rem;
+    margin-top: 0rem;
+
+    &__cardHero {
+      width: 28rem;
+      height: 17rem;
+    }
+  }
+
+  .hero__row3 {
+    margin-top: 1rem;
+    width: 100vw;
+    &__item {
+      height: 14rem;
+      width: 8rem;
+      display: flex;
+      flex-direction: column;
+
+      &__icon {
+        width: 6rem;
+        height: 4rem;
+      }
+
+      &__description {
+        width: 6rem;
+        height: 14rem;
+        h2 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 623px) {
+  html {
+    font-size: 10px;
+  }
+
+  .hero__row {
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    &__card__img {
+      height: 25rem;
+      width: 40rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .hero__row2 {
+    flex-direction: column;
+    height: 70rem;
+    align-items: center;
+    margin-top: -1.8rem;
+
+    &__cardHero {
+      width: 40rem;
+      height: 30rem;
+
+      img {
+        width: 40rem;
+        height: 20rem;
+      }
+    }
+  }
+
+  .hero__row3 {
+    &__item {
+      height: 15rem;
+      width: 14rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__icon {
+        width: 10rem;
+        height: 4rem;
+      }
+
+      &__description {
+        width: 6rem;
+        h2 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 623px) and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .hero {
+    width: 100vw;
+  }
+
+  .hero__row {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .hero__row2 {
+    flex-direction: column;
+    height: 50rem;
+    align-items: center;
+  }
+  .hero__row__card__img {
+    height: 28.5rem;
+    width: 57rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero__row2 {
+    height: 80rem;
+    margin-top: -2rem;
+    &__cardHero {
+      img {
+        width: 50rem;
+        height: 25rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
+
+  .hero__row {
+    height: 53rem;
+    &__card {
+      width: 60rem;
+      height: 25rem;
+      margin-bottom: -5rem;
+      &__img {
+        margin-bottom: 3rem;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .hero__row2 {
+    margin-top: 10px;
+    &__cardHero {
+      img {
+        width: 44rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+  .hero__row {
+    height: 29rem;
+    width: 100vw;
+    &__card {
+      height: 26.7rem;
+      width: 55rem;
+      &__img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .hero__row2 {
+    height: 20rem;
+
+    &__cardHero {
+      img {
+        width: 30rem;
+        height: 18rem;
+      }
+    }
+  }
+}

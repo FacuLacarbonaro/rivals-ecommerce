@@ -1,0 +1,76 @@
+@import "../../Assets/Colors/colors.scss";
+@import "../../Assets/Fonts/fonts.scss";
+
+.basketItem {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 6.25rem;
+  margin-top: 2.5rem;
+
+  img {
+    width: 9.375rem;
+  }
+
+  &__name {
+    text-decoration: none;
+    color: black;
+    transition: 0.6s ease all;
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  p {
+    font-family: $font-roboto;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    button {
+      outline: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      width: 100%;
+      height: 3rem;
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    &__add {
+      margin-bottom: 1.125rem;
+      background-color: $pink;
+      transition: 0.8s ease all;
+      color: white;
+
+      &:hover {
+        transform: translateX(-0.375rem);
+      }
+    }
+
+    &__remove {
+      background-color: #c2c0c0;
+      transition: 0.8s ease all;
+
+      &:hover {
+        transform: translateX(-0.375rem);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
+}

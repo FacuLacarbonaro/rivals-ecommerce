@@ -1,0 +1,96 @@
+@import "../../Assets/Fonts/fonts.scss";
+@import "../../Assets/Colors/colors.scss";
+
+.sidebar {
+  height: 35rem;
+  width: 30rem;
+  background-color: $gray-light;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3.125rem;
+  padding-top: 1.25rem;
+  border: 0.0625rem dashed gray;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      font-size: 1.125rem;
+      padding-left: 2.5rem;
+      align-self: flex-start;
+      font-weight: 600;
+    }
+
+    &__subtotal {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1rem;
+
+      p {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+    }
+
+    &__shipping {
+      width: 100%;
+      h2 {
+        justify-self: flex-start;
+        font-size: 1rem;
+        padding-bottom: 0.625rem;
+      }
+
+      &__option {
+        width: 10rem;
+        padding: 0.9375rem;
+        padding-left: 2.5rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  &__total {
+    font-size: 1rem;
+    width: 100%;
+    color: $pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    width: 20rem;
+
+    button {
+      height: 2.5rem;
+      outline: none;
+      background-color: transparent;
+      border: 0.125rem solid $pink;
+      color: $pink;
+      width: 20rem;
+      cursor: pointer;
+      transition: 1s ease-in-out all;
+      &:hover {
+        background-color: $pink;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
+}
