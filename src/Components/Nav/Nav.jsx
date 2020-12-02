@@ -4,8 +4,6 @@ import { GrCart } from "react-icons/gr";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import DropDownMenu from "../DropDownMenu/DropDownMenu";
-import DropDownItem from "../DropDownItem/DropDownItem";
 
 import logo from "../../Assets/Img/png/logo.png";
 
@@ -18,42 +16,31 @@ const Nav = ({ checkout }) => {
             <img src={logo} alt="Rivals" />
           </Link>
 
-          <DropDownMenu category="Home">
-            <DropDownItem name="One" />
-            <DropDownItem name="Two" />
-          </DropDownMenu>
-
-          <DropDownMenu category="Shop">
-            <DropDownItem name="One" />
-            <DropDownItem name="Two" />
-          </DropDownMenu>
-
-          <DropDownMenu category="Products">
-            <DropDownItem name="One" />
-            <DropDownItem name="Two" />
-          </DropDownMenu>
-
-          <DropDownMenu category="Category">
-            <DropDownItem name="One" />
-            <DropDownItem name="Two" />
-          </DropDownMenu>
-
-          <DropDownMenu category="Sale">
-            <DropDownItem name="One" />
-            <DropDownItem name="Two" />
-          </DropDownMenu>
-
-          <DropDownMenu category="Last sale's">
-            <DropDownItem name="One" />
-            <DropDownItem name="Two" />
-          </DropDownMenu>
+          <Link className="nav__bottom__left__item">
+            <p>Home</p>
+          </Link>
+          <Link className="nav__bottom__left__item">
+            <p>Shop</p>
+          </Link>
+          <Link className="nav__bottom__left__item">
+            <p>Products</p>
+          </Link>
+          <Link className="nav__bottom__left__item">
+            <p>Category</p>
+          </Link>
+          <Link className="nav__bottom__left__item">
+            <p>Sale</p>
+          </Link>
+          <Link className="nav__bottom__left__item">
+            <p>Last sale's</p>
+          </Link>
         </div>
         <div className="nav__bottom__right">
           <input type="text" placeholder="Search product" />
           <Link to="/basket">
-            <GrCart className='nav__bottom__right__icon' />
+            <GrCart className="nav__bottom__right__icon" />
           </Link>
-            <p> {checkout.length} </p>
+          <p> {checkout.length} </p>
         </div>
       </div>
     </header>
