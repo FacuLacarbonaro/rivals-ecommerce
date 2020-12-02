@@ -1,11 +1,12 @@
 import Axios from "axios";
 import { put, takeEvery } from "redux-saga/effects";
 
-/* https://pokeapi.co/api/v2/pokemon/ditto */
 
 function* productSaga() {
   try {
-    const res = yield Axios.get("http://localhost:3001/products");
+    const res = yield Axios.get(
+      "https://rivals-ecommerce.herokuapp.com/products"
+    );
     let data = res.data;
     yield put({
       type: "FETCH_PRODUCTS_SUCCESS",
