@@ -2,13 +2,12 @@
 @import "../../Assets/Colors/colors.scss";
 
 .slider {
-  height: 37.5rem;
+  height: 45rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10em;
   
 
   &__carousel {
@@ -47,6 +46,9 @@
   &:focus:enabled {
     box-shadow: 0 0 1px 2px $pink;
   }
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
